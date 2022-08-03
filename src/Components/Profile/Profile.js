@@ -1,4 +1,4 @@
-import React, {useEffect, useState} from 'react';
+import React, { useEffect, useState } from 'react';
 import { Container, Form } from 'react-bootstrap';
 import Info from './Info';
 
@@ -14,24 +14,24 @@ const Profile = () => {
 
     }, [])
     return (
-        <div className='mt-5 text-light'>
-            <Container>
-                <div className='shadow p-3 mb-5'>
-                <Form>
-                    {
-                       
-                            info?.map(data => <Info
-                                key={data.id}
-                                data={data}
-                            >
-                            </Info>)
-        
-                    }
-                </Form>
+                <div className='my-5 text-light'>
+                    <Container>
+                        <div className='shadow'>
+                            <Form>
+                                {
+
+                                    info?.map(data => <Info
+                                        key={data.id}
+                                        data={data}
+                                    >
+                                    </Info>)
+
+                                }
+                            </Form>
+                        </div>
+
+                    </Container>
                 </div>
-                
-            </Container>
-        </div>
     );
 };
 

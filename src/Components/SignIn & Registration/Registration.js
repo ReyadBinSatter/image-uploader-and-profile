@@ -9,7 +9,7 @@ const Registration = () => {
         navigate('/signin')
     }
     return (
-        <div className=' w-50 h-74 mt-5 mx-auto d-flex align-items-start'>
+        <div className=' w-100 h-75 mt-5 mx-auto d-flex align-items-start'>
             <Container>
                 <Row>
                     <Col xs={12} md={8}>

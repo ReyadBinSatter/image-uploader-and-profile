@@ -8,7 +8,7 @@ const Info = ({data}) => {
             <Row>
                 <Col sm={4}>
                     <img src={pic} className="w-100"/>
-                    <h1 className=' d-flex justify-content-center mt-5'>{data.user_name}</h1>
+                    <h1 className=' d-flex justify-content-center my-5'>{data.user_name}</h1>
                 </Col>
                 <Col sm={8}>
                     <h2 className=' border-bottom '>Profile Information</h2>

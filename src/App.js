@@ -9,8 +9,8 @@ import Header from './Components/Header/Header';
 
 function App() {
   return (
-    <div className='bg'>
-      <div className='bg-color'>
+    <div className='bg-img'>
+      <div className='bg-color '>
         <Header></Header>
         <Routes>
           <Route path="/" element={<Profile></Profile>}></Route>

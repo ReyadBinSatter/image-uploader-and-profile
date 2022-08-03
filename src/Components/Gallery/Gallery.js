@@ -3,7 +3,7 @@ import { Image, Item, Button } from "semantic-ui-react";
 import { Container, Row, Col } from 'react-bootstrap';
 import imageCompression from "browser-image-compression";
 import pic from '../../Images/placeholder.png';
-
+import '../Common.css'
 
 const Gallery = () => {
     const [origImage, setOrigImage] = useState("");
@@ -71,102 +71,103 @@ const Gallery = () => {
 
     };
     return (
-        <div className='mt-5'>
+                <div className='mt-5 container'>
 
 
-            <Container>
-                <Row>
-                    <Col>
-                        <Item>
+                    <Container>
+                        <Row xs={1} md={2}>
+                            <Col>
+                                <Item>
 
-                            {origImageFile ? (
+                                    {origImageFile ? (
 
-                                <Image src={origImageFile}></Image>
+                                        <Image src={origImageFile} className='w-100'></Image>
 
-                            ) : (
+                                    ) : (
 
-                                <Image src={pic}></Image>
+                                        <Image src={pic} className='w-100'></Image>
 
-                            )}
+                                    )}
 
-                        </Item>
-                    </Col>
-
-
-                    <Col>
-
-                        <Item>
-
-                            {compressedImage ? (
-
-                                <Image src={compressedImage}></Image>
-
-                            ) : (
-
-                                <Image src={pic}></Image>
-
-                            )}
-
-                        </Item>
-                    </Col>
-                </Row>
-
-                <input
-
-                    type="file"
-
-                    accept="image/*"
-
-                    className="my-3 btn btn-outline-info w-50 me-3"
-
-                    onChange={(e) => handle(e)}
-
-                />
+                                </Item>
+                            </Col>
 
 
+                            <Col>
 
-                {origImageFile && (
+                                <Item>
 
-                    <Button
+                                    {compressedImage ? (
 
-                        className='btn btn-outline-info py-2 me-3'
+                                        <Image src={compressedImage} className='w-100'></Image>
 
-                        onClick={(e) => {
+                                    ) : (
 
-                            handleCompressImage(e);
+                                        <Image src={pic} className='w-100'></Image>
 
-                        }}
+                                    )}
 
-                    >
+                                </Item>
+                            </Col>
+                        </Row>
 
-                        {" "}
+                        <input
 
-                        Compress Image
+                            type="file"
 
-                    </Button>
+                            accept="image/*"
 
-                )}
+                            className="my-3 btn btn-outline-info w-50 me-3"
+
+                            onChange={(e) => handle(e)}
+
+                        />
 
 
 
-                {compressedImage && (
+                        {origImageFile && (
 
-                    <Button className='btn btn-outline-info py-2 me-3'>
+                            <Button
 
-                        <a href={compressedImage} download={fileName} className='text-decoration-none text-info'>
+                                className='btn btn-outline-info py-2 me-3'
 
-                            {" "}
+                                onClick={(e) => {
 
-                            Download Image
+                                    handleCompressImage(e);
 
-                        </a>
+                                }}
 
-                    </Button>
+                            >
 
-                )}
-            </Container>
+                                {" "}
 
-        </div>
+                                Compress Image
+
+                            </Button>
+
+                        )}
+
+
+
+                        {compressedImage && (
+
+                            <Button className='btn btn-outline-info py-2 me-3'>
+
+                                <a href={compressedImage} download={fileName} className='text-decoration-none text-info'>
+
+                                    {" "}
+
+                                    Download Image
+
+                                </a>
+
+                            </Button>
+
+                        )}
+                    </Container>
+
+                </div>
+         
     );
 };
 
