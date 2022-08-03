@@ -11,7 +11,7 @@ const Header = () => {
                         <Nav>
                             <Nav.Link as={Link} to="/profile" className='text-light m-3'>Profile</Nav.Link>
                             <Nav.Link as={Link} to="/gallery" className='text-light m-3'>Gallery</Nav.Link>
-                            <Nav.Link as={Link} to="/signin" className='text-light m-3'>SignIn</Nav.Link>
+                            <Nav.Link as={Link} to="/signin" className='text-light m-3'>Sign In</Nav.Link>
                         </Nav>
                     </Navbar.Collapse>
                 </Container>

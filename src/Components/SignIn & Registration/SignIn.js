@@ -14,7 +14,7 @@ const SignIn = () => {
                 <Row>
                     <Col xs={12} md={8}>
                         <div className='text-light'>
-                            <h1 className='text-center'>Please Login</h1>
+                            <h1 className='text-center'>Please Sign In</h1>
                             <Form>
                                 <Form.Group className="mb-4" controlId="formBasicEmail">
                                     <Form.Label>Email address</Form.Label>

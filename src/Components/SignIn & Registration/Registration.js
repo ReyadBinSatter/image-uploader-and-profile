@@ -15,7 +15,7 @@ const Registration = () => {
                     <Col xs={12} md={8}>
                         <div className='text-light'>
                             <h1 className='text-center'>Please Registration</h1>
-                            <p className='text-center'>If you have a account <Link to="/signin" className='text-info text-decoration-none' onClick={gotoSignIn}>Goto Sign in</Link></p>
+                            <p className='text-center'>If you have a account <Link to="/signin" className='text-info text-decoration-none' onClick={gotoSignIn}>Goto Sign In</Link></p>
                             <Form>
                                 <Form.Group className="mb-4" controlId="formBasicName">
                                     <Form.Label>User Name</Form.Label>
