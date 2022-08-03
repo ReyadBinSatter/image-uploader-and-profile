@@ -2,6 +2,7 @@ import React, { useState } from 'react';
 import { Image, Item, Button } from "semantic-ui-react";
 import { Container, Row, Col } from 'react-bootstrap';
 import imageCompression from "browser-image-compression";
+import pic from '../../Images/placeholder.png';
 
 
 const Gallery = () => {
@@ -84,7 +85,7 @@ const Gallery = () => {
 
                             ) : (
 
-                                <Image src="http://navparivartan.in/wp-content/uploads/2018/11/placeholder.png"></Image>
+                                <Image src={pic}></Image>
 
                             )}
 
@@ -102,7 +103,7 @@ const Gallery = () => {
 
                             ) : (
 
-                                <Image src="http://navparivartan.in/wp-content/uploads/2018/11/placeholder.png"></Image>
+                                <Image src={pic}></Image>
 
                             )}
 
